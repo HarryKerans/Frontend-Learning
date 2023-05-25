@@ -3,11 +3,12 @@ var msg = document.getElementById("arrayMsg");
 var arrayNotSorted = ["dog", "buffalo", "cat", "zebra", "frog", "antelope", "aardvark", "elephant"];
 
 
-msg.textContent = "Original Order : [" + arrayNotSorted + "]";
-msg.innerHTLM += "<strong> Original Order : </strong> [" + arrayNotSorted + "]";
+//msg.textContent = "Original Order : [" + arrayNotSorted + "]";
+
+msg.innerHTML += "<p><strong> Original Order : </strong> [" + arrayNotSorted + "]<p>";
 
 var arraySorted = arrayNotSorted.sort();
-document.write("New Order Deafult Sort: [" + arraySorted + "]");
+msg.innerHTML += "<p><strong>New Order Deafult Sort: </strong> [" + arraySorted + "]<p>";
 
 function lengthSort (a, b) {
     return a.length - b.length;
@@ -15,5 +16,5 @@ function lengthSort (a, b) {
 
 
 var arraySortedLength = arrayNotSorted.sort(lengthSort);
-document.write("New Order Sorted By Length: [" + arraySortedLength + "]");
+msg.innerHTML += "<p><strong>New Order Sorted By Length: </strong> [" + arraySortedLength + "]<p>";
 
