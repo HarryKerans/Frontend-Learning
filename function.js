@@ -4,7 +4,7 @@ function sayHello(who) {
 }
 
 document.write("Hello World! "); //Displays Hello World on the web page!
-var number = 7;
+var number = 1;
 var sentence = "ABCDEFG";
 var length = sentence.length;
 document.write(length);
